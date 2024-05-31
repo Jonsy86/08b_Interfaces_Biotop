@@ -1,5 +1,11 @@
 package com.cc.java;
 
+import com.cc.java.bees.Drone;
+import com.cc.java.bees.HoneyBee;
+import com.cc.java.bees.Queen;
+import com.cc.java.bees.Worker;
+import com.cc.java.birds.Bird;
+
 public class App {
     
     public static void main(String[] args) {
@@ -13,6 +19,7 @@ public class App {
         pollObj(worker);
         pollObj(drone);
         pollObj(bird);
+        
 
         //-- Das geht jetzt nicht mehr ! -- // 
         // HoneyBee bee = new HoneyBee(); // abstrakte Superklasse!
@@ -28,6 +35,12 @@ public class App {
         output("-----------------");
     }
 
+    // Überladung-----//
+    private static void pollObj(Bird obj){
+        output(obj.hasFeathers());
+        output(obj.fly());
+        output("-----------------");
+    }
    
     private static void output(String outputStr) {
         System.out.println(outputStr);
